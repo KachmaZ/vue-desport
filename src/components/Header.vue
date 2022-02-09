@@ -1,9 +1,8 @@
 <template>
   <header>
     <div class="designer-data">
-      <span class="name">{{ name }}</span
-      ><br />
-      <span class="profession">{{ profession }}</span>
+      <div class="name">{{ name }}</div>
+      <div class="profession">{{ profession }}</div>
     </div>
     <div class="nav-menu">
       <div class="nav-button">
@@ -38,5 +37,47 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Rosario:ital@0;1&display=swap');
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: Rosario;
+
+  background-color: rgba(166, 166, 166, 0.45)
+}
+
+.designer-data {
+  margin: 0 30px;
+}
+
+.name {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.profession {
+  font-size: 10px;
+  line-height: 12px;
+  font-style: italic;
+}
+
+.nav-menu {
+  display: flex;
+
+}
+
+.nav-button {
+  font-size: 14px;
+  margin: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
 </style>

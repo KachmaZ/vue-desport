@@ -1,6 +1,6 @@
 <template>
     <div>
-        This is Prices and Services page
+        <h1>This is Prices and Services page</h1>
     </div>
 </template>
 
