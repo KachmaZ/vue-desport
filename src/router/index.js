@@ -8,27 +8,27 @@ import Contacts from "../views/Contacts.vue"
 
 const routes = [
   {
-    path: "/desport-vue/",
+    path: "/",
     name: "Home",
     component: Home,
   },
   {
-    path: "/desport-vue/about",
+    path: "/about",
     name: "About",
     component: About,
   },
   {
-    path: "/desport-vue/portfolio",
+    path: "/portfolio",
     name: "Portfolio",
     component: Portfolio,
   },
   {
-    path: "/desport-vue/prices",
+    path: "/prices",
     name: "Prices and Services",
     component: Prices,
   },
   {
-    path: "/desport-vue/contacts",
+    path: "/contacts",
     name: "Contacts",
     component: Contacts,
   },
