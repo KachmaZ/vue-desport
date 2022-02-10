@@ -1,5 +1,18 @@
 <template>
   <div class="about">
-    <h1>This is about page</h1>
+    <DesInfo />
   </div>
 </template>
+
+<script>
+import DesInfo from "../components/DesInfo.vue"
+
+export default {
+  components: {
+    DesInfo
+  },
+}
+</script>
+
+<style scoped>
+</style>
