@@ -22,7 +22,5 @@ html {
 
 body {
   margin: 0;
-  
-  background-color: #E5E5E5;
 }
 </style>
