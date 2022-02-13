@@ -6,16 +6,28 @@
       class="designer-photo"
     />
     <div class="designer-description">
-      <h1 class="desc-head">Создание дизайна интерьеров</h1>
-      <p class="desc-text">
-        Предварительные выводы неутешительны: понимание сути ресурсосберегающих
-        технологий позволяет выполнить важные задания по разработке вывода
-        текущих активов. Повседневная практика показывает, что высокое качество
-        позиционных исследований прекрасно подходит для реализации
-        своевременного выполнения сверхзадачи. <br />
-        В частности, базовый вектор развития выявляет срочную потребность
-        инновационных методов управления процессами.
+      <h1 class="desc-head">Обо Мне</h1>
+      <div class="desc-text">
+        <p>Создаю красивые и функциональные дизайны жилых интерьеров.</p>
+
+      <p>
+        Главная задача при работе над проектами - обустроить пространство так,
+        чтобы заказчик максимально комфортно чувствовал себя дома и вдохновлялся
+        на новые свершения.
       </p>
+      <p>
+        <span>Образование:</span> 
+        <ul>
+          <li>Курсы дизайна интерьера в Современной школе дизайна 2021г.</li>
+          <li>Курсы 3д визуализации 3d club</li>
+        </ul>
+      </p>
+      <div class="quote">
+        «В хорошем дизайне функциональность всегда первична, независимо от форм.
+        Но она не должна угнетать эмоции».
+      </div>
+      <p class="author">Giorgio Saporiti</p>
+      </div>
     </div>
   </div>
 </template>
@@ -26,34 +38,55 @@ export default {};
 
 <style scoped>
 .designer-info {
-  margin-top: 80px;
+  margin: 80px 150px 160px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  font-family: Lato;
 }
 
 .designer-photo {
-  width: 25%;
-  min-width: 500px;
+  width: 35%;
 }
 
 .designer-description {
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+
+  width: 55%;
+  font-size: 24px;
 }
 
 .desc-head {
   margin: 0;
+
+  align-self: center;
+
+
+  font-family: Bodoni;
   font-style: normal;
   font-weight: 300;
   font-size: 72px;
   line-height: 98px;
-  color: #582500;
 }
 
 .desc-text {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
-  color: #ffffff;
+}
+
+.quote {
+  width: 400px;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.author {
+  align-self: flex-end;
+  font-weight: bold;
 }
 </style>

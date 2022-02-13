@@ -1,8 +1,11 @@
 <template>
   <header>
     <div class="designer-data">
-      <div class="name">{{ name }}</div>
-      <div class="profession">{{ profession }}</div>
+      <div class="des-data-wrapper">
+        <span class="name">{{ name }}</span
+        ><br />
+        <span class="profession">{{ profession }}</span>
+      </div>
     </div>
     <div class="nav-menu">
       <div class="nav-button">
@@ -38,21 +41,24 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Rosario:ital@0;1&display=swap');
-
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  font-family: Rosario;
+  font-family: Lato;
 
-  background-color: rgba(166, 166, 166, 0.45)
+  background-color: #bababa24;
 }
 
 .designer-data {
-  margin: 0 30px;
+  width: 320px;
+  padding: 8px 0 8px 30px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #c9c9c866;
 }
 
 .name {
@@ -68,7 +74,6 @@ header {
 
 .nav-menu {
   display: flex;
-
 }
 
 .nav-button {
