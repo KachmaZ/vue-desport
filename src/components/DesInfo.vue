@@ -37,21 +37,6 @@ export default {};
 </script>
 
 <style scoped>
-@font-face {
-  font-family: Lato;
-  src: url("../fonts/Lato_Light.ttf");
-}
-
-@font-face {
-  font-family: Bodoni;
-  src: url("../fonts/bodoni.ttf");
-}
-
-
-ul {
-  margin: 0;
-}
-
 .designer-info {
   margin: 80px 150px 160px;
   display: flex;

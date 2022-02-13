@@ -13,10 +13,6 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: HamiltoneG;
-  src: url("../fonts/HamiltoneG.ttf");
-}
 
 .signature {
   font-family: HamiltoneG;

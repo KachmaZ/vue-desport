@@ -33,9 +33,9 @@ export default {
 .regular {
   width: 35px;
   height: 130px;
-  position: sticky;
+  position: fixed;
   top: 100px;
-  left: 100%;
+  left: 97%;
   margin-right: 20px;
 
   flex-direction: column;

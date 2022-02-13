@@ -41,11 +41,6 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: Lato;
-  src: url("../fonts/Lato_Light.ttf");
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -58,7 +53,6 @@ header {
 
 .designer-data {
   width: 320px;
-  margin: 0 30px;
   padding: 8px 0 8px 30px;
 
   display: flex;

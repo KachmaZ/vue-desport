@@ -36,11 +36,6 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: Lato;
-  src: url("../fonts/Lato_Light.ttf");
-}
-
 footer {
   position: relative;
   height: 290px;
@@ -69,7 +64,7 @@ footer {
 
 .signature { 
   position: absolute;
-  top: 220px;
+  top: 140px;
   left: 90px;
 }
 </style>
