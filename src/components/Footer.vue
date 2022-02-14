@@ -12,7 +12,7 @@
     <div class="copyright">
       © 2013 — 2022 Молчанова Вероника Дизайн и проектирование интерьеров
     </div>
-    <Signature :name="userName" />
+    <Signature :name="user.name" />
   </footer>
 </template>
 
@@ -24,7 +24,7 @@ import SocLinks from "../components/SocLinks.vue";
 export default {
   data() {
     return {
-      userName: userConfig.name,
+      user: userConfig,
     };
   },
 
