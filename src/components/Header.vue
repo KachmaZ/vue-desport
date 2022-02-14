@@ -9,19 +9,29 @@
     </div>
     <div class="nav-menu">
       <div class="nav-button">
-        <router-link to="/">Главная</router-link>
+        <div class="nav-link">
+          <router-link to="/">Главная</router-link>
+        </div>
       </div>
       <div class="nav-button">
-        <router-link to="/about">Обо Мне</router-link>
+        <div class="nav-link">
+          <router-link to="/about">Обо Мне</router-link>
+        </div>
       </div>
       <div class="nav-button">
-        <router-link to="/portfolio">Портфолио</router-link>
+        <div class="nav-link">
+          <router-link to="/portfolio">Портфолио</router-link>
+        </div>
       </div>
       <div class="nav-button">
-        <router-link to="/prices">Цены и Услуги</router-link>
+        <div class="nav-link">
+          <router-link to="/prices">Цены и Услуги</router-link>
+        </div>
       </div>
       <div class="nav-button">
-        <router-link to="/contacts">Контакты</router-link>
+        <div class="nav-link">
+          <router-link to="/contacts">Контакты</router-link>
+        </div>
       </div>
     </div>
   </header>
@@ -77,8 +87,27 @@ header {
 }
 
 .nav-button {
+  width: 130px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  width: 100%;
+  padding: 6px;
+
+  display: flex;
+  justify-content: center;
+
   font-size: 14px;
-  margin: 30px;
+
+  transition: 0.5s linear;
+}
+
+.nav-link:hover {
+  background-color: #8bb3bc;
 }
 
 a {
