@@ -21,6 +21,7 @@ export default {};
 .in-production {
   width: 100%;
   height: 100vh;
+  padding-top: 150px;
   padding-bottom: 300px;
 
   display: flex;
