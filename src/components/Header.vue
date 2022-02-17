@@ -107,8 +107,10 @@ header {
 }
 
 .nav-link:hover {
-  background-color: #8bb3bc;
+  background-color: #8BB3BC36;
 }
+
+
 
 a {
   text-decoration: none;
