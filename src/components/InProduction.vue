@@ -21,6 +21,7 @@ export default {};
 .in-production {
   width: 100%;
   height: 100vh;
+  padding-bottom: 300px;
 
   display: flex;
   flex-direction: column;
@@ -29,7 +30,8 @@ export default {};
 
   color: #ffffff;
 
-  background-image: url("../assets/recreation-room.png");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/recreation-room.png");
   background-position: center;
   background-size: cover;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -42,7 +44,7 @@ export default {};
     align-items: center;
 
     .prod-head {
-      margin-bottom: 100px;
+      margin-bottom: 50px;
 
       font-family: Bodoni;
       font-style: normal;
@@ -79,8 +81,8 @@ export default {};
       }
 
       input {
-        width: 50%;
-        height: 70px;
+        width: 40%;
+        height: 80px;
 
         margin-right: 20px;
         padding-left: 23px;
