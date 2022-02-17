@@ -1,12 +1,16 @@
 <template>
     <div>
-        This is portfolio page
-    </div>
+    <InProduction />
+  </div>
 </template>
 
 <script>
+    import InProduction from '../components/InProduction.vue'
+
     export default {
-        
+        components: {
+            InProduction,
+        }
     }
 </script>
 
