@@ -1,15 +1,18 @@
 <template>
-    <div>
-        <h1>This is contacts page</h1>
-    </div>
+  <div>
+    <InProduction />
+  </div>
 </template>
 
 <script>
+    import InProduction from '../components/InProduction.vue'
+
     export default {
-        
+        components: {
+            InProduction,
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-
 </style>

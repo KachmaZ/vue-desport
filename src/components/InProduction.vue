@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="prod-head">Сайт в разработке</h1>
       <p class="prod-desc">
-        Получить уведомление об окончании технических работ:
+        получить уведомление об окончании технических работ:
       </p>
       <form action="" class="desc-form">
         <input type="email" placeholder="Ваш e-mail" />
@@ -21,6 +21,7 @@ export default {};
 .in-production {
   width: 100%;
   height: 100vh;
+  padding-bottom: 300px;
 
   display: flex;
   flex-direction: column;
@@ -33,6 +34,7 @@ export default {};
     url("../assets/recreation-room.png");
   background-position: center;
   background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   .container {
     width: 75%;
@@ -42,7 +44,7 @@ export default {};
     align-items: center;
 
     .prod-head {
-      margin-bottom: 100px;
+      margin-bottom: 50px;
 
       font-family: Bodoni;
       font-style: normal;
@@ -79,8 +81,8 @@ export default {};
       }
 
       input {
-        width: 50%;
-        height: 70px;
+        width: 40%;
+        height: 80px;
 
         margin-right: 20px;
         padding-left: 23px;
