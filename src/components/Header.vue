@@ -8,36 +8,21 @@
       </div>
     </div>
     <div class="nav-menu">
-      <div class="nav-button">
-        <div class="nav-link">
-          <router-link to="/">Главная</router-link>
-        </div>
-      </div>
-      <div class="nav-button">
-        <div class="nav-link">
-          <router-link to="/about">Обо Мне</router-link>
-        </div>
-      </div>
-      <div class="nav-button">
-        <div class="nav-link">
-          <router-link to="/portfolio">Портфолио</router-link>
-        </div>
-      </div>
-      <div class="nav-button">
-        <div class="nav-link">
-          <router-link to="/prices">Цены и Услуги</router-link>
-        </div>
-      </div>
-      <div class="nav-button">
-        <div class="nav-link">
-          <router-link to="/contacts">Контакты</router-link>
-        </div>
-      </div>
+      <router-link
+        class="nav-link"
+        @click="setCurrent"
+        v-for="page in getSitePages"
+        :key="page.id"
+        :class="page.name == getCurrPage ? 'current' : ''"
+        :data-name="page.name"
+        :to="page.link"
+        >{{ page.desc }}</router-link>
     </div>
   </header>
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
 import userConfig from "../../user.config";
 
 export default {
@@ -47,10 +32,22 @@ export default {
       profession: userConfig.profession,
     };
   },
+
+  computed: {
+    ...mapGetters(["getCurrPage", "getSitePages"]),
+  },
+
+  methods: {
+    ...mapActions(["setCurrPage"]),
+
+    setCurrent: function (event) {
+      this.setCurrPage(event.target.getAttribute("data-name"));
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   display: flex;
   justify-content: space-between;
@@ -86,16 +83,8 @@ header {
   display: flex;
 }
 
-.nav-button {
-  width: 130px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .nav-link {
-  width: 100%;
+  width: 130px;
   padding: 6px;
 
   display: flex;
@@ -104,13 +93,15 @@ header {
   font-size: 14px;
 
   transition: 0.5s linear;
+
+  &:hover {
+    background-color: #8bb3bc36;
+  }
+
+  &.current {
+    background-color: #8bb3bc9c;
+  }
 }
-
-.nav-link:hover {
-  background-color: #8BB3BC36;
-}
-
-
 
 a {
   text-decoration: none;

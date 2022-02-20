@@ -1,25 +1,24 @@
 <template>
   <div>
     <Header />
-    <SocLinks :isRegular="true"/>
+    <SocLinks :isRegular="true" />
     <router-view />
     <Footer />
-  </div>  
+  </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-import SocLinks from './components/SocLinks.vue'
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+import SocLinks from "./components/SocLinks.vue";
 export default {
   components: {
     Header,
     Footer,
     SocLinks,
   },
-}
+};
 </script>
-
 
 <style>
 @font-face {
@@ -41,12 +40,11 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 a {
   text-decoration: 0;
-  color: #000
+  color: #000;
 }
 
 body {

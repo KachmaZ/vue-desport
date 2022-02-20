@@ -5,14 +5,13 @@
 </template>
 
 <script>
-import DesInfo from "../components/DesInfo.vue"
+import DesInfo from "../components/DesInfo.vue";
 
 export default {
   components: {
-    DesInfo
+    DesInfo,
   },
-}
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

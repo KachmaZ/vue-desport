@@ -6,7 +6,10 @@
     <a class="behance" href="https://www.behance.net/molchanova3796">
       <img src="../assets/icons/behance.svg" />
     </a>
-    <a class="whatsapp" href="https://vk.com/away.php?to=https%3A%2F%2Fwa.me%2F%2B79518717933&el=snippet">
+    <a
+      class="whatsapp"
+      href="https://vk.com/away.php?to=https%3A%2F%2Fwa.me%2F%2B79518717933&el=snippet"
+    >
       <img src="../assets/icons/whatsapp.svg" />
     </a>
   </div>
@@ -23,7 +26,6 @@ export default {
 
 <style scoped>
 .soc-links {
-  
   display: flex;
   justify-content: space-between;
 
@@ -33,10 +35,12 @@ export default {
 .regular {
   width: 35px;
   height: 130px;
+
   position: fixed;
   top: 100px;
   left: 97%;
   margin-right: 20px;
+  z-index: 10;
 
   flex-direction: column;
 }

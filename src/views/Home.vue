@@ -15,7 +15,7 @@
           разработке вывода текущих активов.
         </p>
       </div>
-      <div class="intro-more">
+      <div class="intro-more more-btn">
         <router-link to="/about">More</router-link>
       </div>
     </section>
@@ -30,7 +30,7 @@
           что высокое качество позиционных исследований прекрасно подходит для
           реализации своевременного выполнения сверхзадачи.
         </p>
-        <br>
+        <br />
         <p class="desc-text">
           В частности, базовый вектор развития выявляет срочную потребность
           инновационных методов управления процессами.
@@ -43,7 +43,15 @@
         <Signature :name="user.name" />
       </div>
     </section>
-    <section class="screen portfolio"></section>
+    <section class="screen portfolio">
+      <div class="title">
+        <h1>PORTFOLIO</h1>
+        <div class="port-more more-btn">
+          <router-link to="/portfolio">More</router-link>
+        </div>
+      </div>
+      <DemosGrid />
+    </section>
     <section class="screen service"></section>
   </div>
 </template>
@@ -51,6 +59,7 @@
 <script>
 import userConfig from "../../user.config.js";
 import Signature from "../components/Signature.vue";
+import DemosGrid from "../components/DemosGrid.vue";
 
 export default {
   data() {
@@ -61,69 +70,77 @@ export default {
 
   components: {
     Signature,
+    DemosGrid,
   },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.more-btn {
+  width: 170px;
+  margin-left: 25px;
+
+  text-align: left;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
+  border-bottom: 1px solid #000;
+}
+
 .introduction {
   position: relative;
   height: 720px;
   margin: 50px 140px 125px;
 
   overflow: hidden;
-}
+  .intro-img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
 
-.intro-img {
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
+    width: 75%;
 
-  width: 75%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
 
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-}
+  .intro-desc {
+    position: absolute;
+    left: 50%;
 
-.intro-desc {
-  position: absolute;
-  left: 50%;
+    width: 50%;
+    height: 100%;
+    padding-top: 200px;
+    margin-bottom: 50px;
 
-  width: 50%;
-  height: 100%;
-  padding-top: 200px;
-  margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
 
-  display: flex;
-  flex-direction: column;
+    text-align: right;
 
-  text-align: right;
-}
+    .intro-head {
+      font-family: Bodoni;
+      font-weight: 400;
+      font-size: 96px;
+    }
 
-.intro-head {
-  font-family: Bodoni;
-  font-weight: 400;
-  font-size: 96px;
-}
+    .intro-text {
+      width: 45%;
+      align-self: flex-end;
 
-.intro-text {
-  width: 45%;
-  align-self: flex-end;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
 
-  font-size: 18px;
-  font-weight: 300;
-}
-
-.intro-more {
-  position: absolute;
-  bottom: 0;
-  left: 75%;
-
-  width: 170px;
-  margin-left: 25px;
-
-  text-align: left;
-
-  border-bottom: 1px solid #000;
+  .intro-more {
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+  }
 }
 
 .designer {
@@ -132,64 +149,87 @@ export default {
   margin-left: 150px;
   display: flex;
   margin-bottom: 125px;
+
+  .des-desc {
+    width: 50%;
+
+    .desc-subtitle {
+      font-family: Bodoni;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 27px;
+    }
+
+    .desc-head {
+      margin-top: 30px;
+      margin-bottom: 100px;
+      font-family: Bodoni;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 64px;
+      line-height: 71px;
+    }
+
+    .desc-text {
+      margin-right: 190px;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: justify;
+    }
+  }
+
+  .des-img-wrapper {
+    width: 50%;
+    padding: 50px 0 240px 0;
+
+    text-align: center;
+
+    background-color: #dedede;
+
+    .des-img {
+      width: 60%;
+    }
+  }
+
+  .signature-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
 }
 
-.des-desc {
-  width: 50%;
-}
-
-.desc-subtitle {
-  font-family: Bodoni;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 27px;
-}
-
-.desc-head {
-  margin-top: 30px;
-  margin-bottom: 100px;
-  font-family: Bodoni;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 64px;
-  line-height: 71px;
-}
-
-.desc-text {
-  margin-right: 190px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: justify;
-}
-
-.des-img-wrapper {
-  width: 50%;
-  padding: 50px 0 240px 0;
-
-  text-align: center;
-
-  background-color: #dedede;
-}
-
-.des-img {
-  width: 60%;
-}
-
-.signature-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0px;
-
+.portfolio {
   width: 100%;
-  height: 100%;
-  padding-bottom: 10%;
+  height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: end;
+  .title {
+    position: relative;
+
+    text-align: center;
+
+    font-family: Bodoni Moda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 152px;
+
+    .port-more {
+      position: absolute;
+      bottom: 0;
+      right: 40px;
+    }
+  }
 }
 </style>

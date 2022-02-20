@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/desport-vue/',
-  }
+  publicPath: "/desport-vue/",
+};

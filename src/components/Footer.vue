@@ -62,7 +62,7 @@ footer {
   color: #00000075;
 }
 
-.signature { 
+.signature {
   position: absolute;
   top: 140px;
   left: 90px;

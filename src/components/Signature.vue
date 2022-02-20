@@ -13,7 +13,6 @@ export default {
 </script>
 
 <style scoped>
-
 .signature {
   font-family: HamiltoneG;
   font-size: 48px;
