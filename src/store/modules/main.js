@@ -1,18 +1,9 @@
 export default {
-  actions: {
-    setCurrPage(ctx, newPage) {
-      ctx.commit("updateCurrPage", newPage);
-    },
-  },
+  actions: {},
 
-  mutations: {
-    updateCurrPage(state, newPage) {
-      state.currPage = newPage;
-    },
-  },
+  mutations: {},
 
   state: {
-    currPage: "home",
     sitePages: [
       { name: "home", desc: "Главная", id: 0, link: "/"},
       { name: "about", desc: "Обо мне", id: 1, link: "/about"},
@@ -23,10 +14,6 @@ export default {
   },
 
   getters: {
-    getCurrPage(state) {
-      return state.currPage;
-    },
-
     getSitePages(state) {
       return state.sitePages;
     },

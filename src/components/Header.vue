@@ -10,7 +10,7 @@
     <div class="nav-menu">
       <router-link
         class="nav-link"
-        @click="setCurrent"
+        active-class="active"
         v-for="page in getSitePages"
         :key="page.id"
         :class="page.name == getCurrPage ? 'current' : ''"
@@ -98,7 +98,7 @@ header {
     background-color: #8bb3bc36;
   }
 
-  &.current {
+  &.active {
     background-color: #8bb3bc9c;
   }
 }
