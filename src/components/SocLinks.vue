@@ -1,14 +1,12 @@
 <template>
   <div class="soc-links" :class="{ regular: isRegular, inline: isInline }">
-    <a class="inst" href="https://www.instagram.com/alnika.design/">
+    <a class="inst" target="_blank" href="https://www.instagram.com/alnika.design/">
       <img src="../assets/icons/instagram.svg" />
     </a>
-    <a class="behance" href="https://www.behance.net/molchanova3796">
+    <a class="behance" target="_blank" href="https://www.behance.net/molchanova3796">
       <img src="../assets/icons/behance.svg" />
     </a>
-    <a
-      class="whatsapp"
-      href="https://vk.com/away.php?to=https%3A%2F%2Fwa.me%2F%2B79518717933&el=snippet"
+    <a class="whatsapp" target="_blank" href="https://api.whatsapp.com/send/?phone=%2B79518717933&text&app_absent=0"
     >
       <img src="../assets/icons/whatsapp.svg" />
     </a>

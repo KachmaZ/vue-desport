@@ -13,7 +13,6 @@
         active-class="active"
         v-for="page in getSitePages"
         :key="page.id"
-        :class="page.name == getCurrPage ? 'current' : ''"
         :data-name="page.name"
         :to="page.link"
         >{{ page.desc }}</router-link>
@@ -22,7 +21,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 import userConfig from "../../user.config";
 
 export default {
@@ -34,16 +33,10 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["getCurrPage", "getSitePages"]),
+    ...mapGetters(["getSitePages"]),
   },
 
-  methods: {
-    ...mapActions(["setCurrPage"]),
-
-    setCurrent: function (event) {
-      this.setCurrPage(event.target.getAttribute("data-name"));
-    },
-  },
+  methods: {},
 };
 </script>
 
