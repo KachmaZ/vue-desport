@@ -22,12 +22,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .soc-links {
   display: flex;
   justify-content: space-between;
 
-  color: #000;
+  color: $black;
 }
 
 .regular {

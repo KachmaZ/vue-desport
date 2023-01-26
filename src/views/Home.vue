@@ -14,9 +14,9 @@
           ресурсосберегающих технологий позволяет выполнить важные задания по
           разработке вывода текущих активов.
         </p>
-      </div>
-      <div class="intro-more more-btn">
-        <router-link to="/about">More</router-link>
+        <div class="intro-more more-btn">
+          <router-link to="/about">More</router-link>
+        </div>
       </div>
     </section>
     <section class="screen designer">
@@ -58,8 +58,8 @@
 
 <script>
 import userConfig from "../../user.config.js";
-import Signature from "../components/Signature.vue";
-import DemosGrid from "../components/DemosGrid.vue";
+import Signature from "@/components/Signature.vue";
+import DemosGrid from "@/components/DemosGrid.vue";
 
 export default {
   data() {
@@ -112,7 +112,7 @@ export default {
     left: 50%;
 
     width: 50%;
-    height: 100%;
+    height: 80%;
     padding-top: 200px;
     margin-bottom: 50px;
 
@@ -134,12 +134,12 @@ export default {
       font-size: 18px;
       font-weight: 300;
     }
-  }
 
-  .intro-more {
-    position: absolute;
-    bottom: 0;
-    left: 75%;
+    .intro-more {
+      position: absolute;
+      bottom: 0;
+      left: 75%;
+    }
   }
 }
 

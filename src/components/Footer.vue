@@ -18,8 +18,8 @@
 
 <script>
 import userConfig from "../../user.config";
-import Signature from "../components/Signature.vue";
-import SocLinks from "../components/SocLinks.vue";
+import Signature from "@/components/Signature.vue";
+import SocLinks from "@/components/SocLinks.vue";
 
 export default {
   data() {
@@ -35,7 +35,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 footer {
   position: relative;
   height: 290px;
@@ -48,7 +48,7 @@ footer {
 
   font-family: Lato;
 
-  background-color: #a6a6a673;
+  background-color: $grey;
 }
 
 .contacts {
@@ -59,7 +59,7 @@ footer {
   width: 320px;
   text-align: center;
 
-  color: #00000075;
+  color: $black;
 }
 
 .signature {

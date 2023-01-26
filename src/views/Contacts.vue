@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import InProduction from "../components/InProduction.vue";
+import InProduction from "@/components/InProduction.vue";
 
 export default {
   components: {

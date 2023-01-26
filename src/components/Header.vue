@@ -48,7 +48,7 @@ header {
 
   font-family: Lato;
 
-  background-color: #bababa24;
+  background-color: $greyTransparent;
 }
 
 .designer-data {
@@ -58,7 +58,7 @@ header {
   display: flex;
   align-items: center;
 
-  background-color: #c9c9c866;
+  background-color: $greyLight;
 }
 
 .name {
@@ -88,16 +88,15 @@ header {
   transition: 0.5s linear;
 
   &:hover {
-    background-color: #8bb3bc36;
+    background-color: $colorHover;
   }
 
   &.active {
-    background-color: #8bb3bc9c;
+    background-color: $colorActive;
   }
 }
 
 a {
   text-decoration: none;
-  color: #000;
 }
 </style>

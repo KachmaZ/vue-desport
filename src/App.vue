@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-import SocLinks from "./components/SocLinks.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+import SocLinks from "@/components/SocLinks.vue";
 export default {
   components: {
     Header,
@@ -20,21 +20,7 @@ export default {
 };
 </script>
 
-<style>
-@font-face {
-  font-family: Lato;
-  src: url("fonts/Lato_Light.ttf");
-}
-
-@font-face {
-  font-family: Bodoni;
-  src: url("fonts/bodoni.ttf");
-}
-
-@font-face {
-  font-family: HamiltoneG;
-  src: url("fonts/HamiltoneG.ttf");
-}
+<style lang="scss">
 
 * {
   margin: 0;
@@ -44,7 +30,7 @@ export default {
 
 a {
   text-decoration: 0;
-  color: #000;
+  color: $black;
 }
 
 body {
