@@ -14,7 +14,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Adding permission
+        run: git update-index --chmod=+x ./.github/scripts/backend_decrypt.sh
+
       - uses: actions/checkout@v1
-      - name: script
+      - name: Script
         run: ./.github/scripts/build.sh
         shell: bash
