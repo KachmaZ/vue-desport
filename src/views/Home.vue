@@ -1,24 +1,7 @@
 <template>
   <div class="home">
-    <div class="container intro">
-      <img
-        class="intro-img"
-        src="../assets/introductionImg.png"
-        alt=""
-        srcset=""
-      />
-      <div class="intro-desc mb-5">
-        <h1 class="intro-head h-1">Interior Design</h1>
-        <p class="intro-text text-1">
-          Предварительные выводы неутешительны: понимание сути
-          ресурсосберегающих технологий позволяет выполнить важные задания по
-          разработке вывода текущих активов.
-        </p>
-        <div class="intro-more more-btn">
-          <router-link to="/about">More</router-link>
-        </div>
-      </div>
-    </div>
+    <Introduction />
+
     <div class="container designer">
       <div class="des-desc">
         <span class="desc-subtitle">Создание дизайна интерьеров</span>
@@ -57,7 +40,9 @@
 </template>
 
 <script>
-import userConfig from "../../user.config.js";
+import userConfig from "../../user.config.js"; //TODO: Change on ENV
+
+import Introduction from "../components/Introduction.vue";
 import Signature from "@/components/parts/Signature.vue";
 import DemosGrid from "@/components/DemosGrid.vue";
 
@@ -69,6 +54,7 @@ export default {
   },
 
   components: {
+    Introduction,
     Signature,
     DemosGrid,
   },
@@ -89,49 +75,6 @@ export default {
   line-height: 29px;
 
   border-bottom: 1px solid #000;
-}
-
-.intro {
-  position: relative;
-  height: 720px;
-  margin: 50px 140px 125px;
-
-  overflow: hidden;
-  .intro-img {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-
-    width: 75%;
-
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-
-  .intro-desc {
-    position: absolute;
-    left: 50%;
-
-    width: 50%;
-    height: 80%;
-    padding-top: 200px;
-    margin-bottom: 50px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-end;
-
-    .intro-head {
-      text-align: right;
-      // font-family: Bodoni;
-      // font-weight: 400;
-      // font-size: 96px;
-    }
-
-    // .intro-text {
-    //   width: 45%;
-    // }
-  }
 }
 
 .designer {
