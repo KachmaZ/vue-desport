@@ -1,5 +1,5 @@
 <template>
-  <div class="container intro mb-lg-6">
+  <div class="intro mb-lg-6">
     <div class="intro__desc">
       <div class="desc mb-lg-8">
         <h1 class="desc__title h-lg-1 mb-lg-5">Interior Design</h1>
@@ -43,13 +43,7 @@ export default {
   background-size: cover;
 
   &__desc {
-    // position: absolute;
-    // left: 50%;
-
     width: 50%;
-    height: 80%;
-    padding-top: 200px;
-    margin-bottom: 50px;
 
     display: flex;
     flex-direction: column;
