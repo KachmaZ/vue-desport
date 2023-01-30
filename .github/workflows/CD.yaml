@@ -14,9 +14,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Adding permission
-        run: git update-index --chmod=+x ./.github/scripts/deploy.sh
-
       - uses: actions/checkout@v1
       - name: Script
         run: ./.github/scripts/deploy.sh
