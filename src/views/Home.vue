@@ -2,31 +2,8 @@
   <div class="home">
     <Introduction />
 
-    <div class="designer">
-      <div class="des-desc">
-        <span class="desc-subtitle">Создание дизайна интерьеров</span>
-        <h2 class="desc-head">Воплощаем мечты</h2>
-        <p class="desc-text">
-          Предварительные выводы неутешительны: понимание сути
-          ресурсосберегающих технологий позволяет выполнить важные задания по
-          разработке вывода текущих активов. Повседневная практика показывает,
-          что высокое качество позиционных исследований прекрасно подходит для
-          реализации своевременного выполнения сверхзадачи.
-        </p>
-        <br />
-        <p class="desc-text">
-          В частности, базовый вектор развития выявляет срочную потребность
-          инновационных методов управления процессами.
-        </p>
-      </div>
-      <div class="des-img-wrapper">
-        <img src="../assets/designer-photo-2.png" alt="" class="des-img" />
-      </div>
-      <div class="signature-wrapper">
-        <Signature :name="user.name" />
-      </div>
-    </div>
-    <div class="portfolio">
+    <Designer />
+    <!-- <div class="portfolio">
       <div class="title">
         <h1>PORTFOLIO</h1>
         <div class="port-more more-btn">
@@ -34,7 +11,7 @@
         </div>
       </div>
       <DemosGrid />
-    </div>
+    </div> -->
     <div class="service"></div>
   </div>
 </template>
@@ -43,8 +20,8 @@
 import userConfig from "../../user.config.js"; //TODO: Change on ENV
 
 import Introduction from "../components/Introduction.vue";
-import Signature from "@/components/parts/Signature.vue";
-import DemosGrid from "@/components/DemosGrid.vue";
+import Designer from "../components/Designer.vue";
+// import DemosGrid from "@/components/DemosGrid.vue";
 
 export default {
   data() {
@@ -55,8 +32,8 @@ export default {
 
   components: {
     Introduction,
-    Signature,
-    DemosGrid,
+    Designer,
+    // DemosGrid,
   },
 };
 </script>
@@ -75,73 +52,6 @@ export default {
   line-height: 29px;
 
   border-bottom: 1px solid #000;
-}
-
-.designer {
-  position: relative;
-
-  margin-left: 150px;
-  display: flex;
-  margin-bottom: 125px;
-
-  .des-desc {
-    width: 50%;
-
-    .desc-subtitle {
-      font-family: Bodoni;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 27px;
-    }
-
-    .desc-head {
-      margin-top: 30px;
-      margin-bottom: 100px;
-      font-family: Bodoni;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 64px;
-      line-height: 71px;
-    }
-
-    .desc-text {
-      margin-right: 190px;
-      font-family: Lato;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 22px;
-      text-align: justify;
-    }
-  }
-
-  .des-img-wrapper {
-    width: 50%;
-    padding: 50px 0 240px 0;
-
-    text-align: center;
-
-    background-color: #dedede;
-
-    .des-img {
-      width: 60%;
-    }
-  }
-
-  .signature-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0px;
-
-    width: 100%;
-    height: 100%;
-    padding-bottom: 10%;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
 }
 
 .portfolio {
