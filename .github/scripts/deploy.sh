@@ -4,7 +4,7 @@
 set -e
 
 # сборка
-npm ci
+npm ci --force
 npm run build
 
 # переход в каталог сборки
