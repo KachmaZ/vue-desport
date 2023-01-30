@@ -2,7 +2,7 @@
   <div class="home">
     <Introduction />
 
-    <div class="container designer">
+    <div class="designer">
       <div class="des-desc">
         <span class="desc-subtitle">Создание дизайна интерьеров</span>
         <h2 class="desc-head">Воплощаем мечты</h2>
@@ -26,7 +26,7 @@
         <Signature :name="user.name" />
       </div>
     </div>
-    <div class="container portfolio">
+    <div class="portfolio">
       <div class="title">
         <h1>PORTFOLIO</h1>
         <div class="port-more more-btn">
@@ -35,7 +35,7 @@
       </div>
       <DemosGrid />
     </div>
-    <div class="container service"></div>
+    <div class="service"></div>
   </div>
 </template>
 

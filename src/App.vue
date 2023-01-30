@@ -2,9 +2,9 @@
   <div>
     <Header />
     <SocLinks :isSided="true" />
-    <main>
+    <div class="container">
       <router-view />
-    </main>
+    </div>
     <Footer />
   </div>
 </template>

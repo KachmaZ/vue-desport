@@ -6,12 +6,12 @@
 
 main {
     @include respond-above(sm) {
-        padding: 0 40px;
     }
 }
 
 .container {
     margin: 0 auto;
+    padding: 0 40px;
 
     max-width: 576px;
 
