@@ -8,12 +8,13 @@ on:
   workflow_dispatch:
     inputs: 
       name:
-        description: "Who to greet
+        description: "Who to greet"
 
 jobs:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v1
-- name: script
-run: ./script.sh
-shell: bash
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: script
+        run: ./script.sh
+        shell: bash
