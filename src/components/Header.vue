@@ -1,22 +1,24 @@
 <template>
-  <header>
-    <div class="designer-data">
-      <div class="des-data-wrapper">
-        <span class="name">{{ name }}</span
+  <header class="header">
+    <div class="header__logo mr-lg-5">
+      <div class="logo p-lg-2">
+        <span class="logo__name">{{ name }}</span
         ><br />
-        <span class="profession">{{ profession }}</span>
+        <span class="logo__profession">{{ profession }}</span>
       </div>
     </div>
-    <div class="nav-menu">
-      <router-link
-        class="nav-link"
-        active-class="active"
-        v-for="page in getSitePages"
-        :key="page.id"
-        :data-name="page.name"
-        :to="page.link"
-        >{{ page.desc }}</router-link
-      >
+    <div class="header__nav">
+      <div class="nav">
+        <router-link
+          class="nav__link"
+          active-class="active"
+          v-for="page in getSitePages"
+          :key="page.id"
+          :data-name="page.name"
+          :to="page.link"
+          >{{ page.desc }}</router-link
+        >
+      </div>
     </div>
   </header>
 </template>
@@ -42,62 +44,65 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
+.header {
+  height: 55px;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: fixed;
 
   font-family: Lato;
 
   background-color: $greyTransparent;
 }
 
-.designer-data {
-  width: 320px;
-  padding: 8px 0 8px 30px;
-
+.nav {
   display: flex;
-  align-items: center;
+  &__link {
+    width: 130px;
+    padding: 6px;
 
-  background-color: $greyLight;
-}
+    display: flex;
+    justify-content: center;
 
-.name {
-  font-size: 14px;
-  line-height: 16px;
-}
+    font-size: 14px;
 
-.profession {
-  font-size: 10px;
-  line-height: 12px;
-  font-style: italic;
-}
+    transition: 0.5s linear;
 
-.nav-menu {
-  display: flex;
-}
+    &:hover {
+      background-color: $colorHover;
+    }
 
-.nav-link {
-  width: 130px;
-  padding: 6px;
-
-  display: flex;
-  justify-content: center;
-
-  font-size: 14px;
-
-  transition: 0.5s linear;
-
-  &:hover {
-    background-color: $colorHover;
-  }
-
-  &.active {
-    background-color: $colorActive;
+    &.active {
+      background-color: $colorActive;
+    }
   }
 }
 
-a {
-  text-decoration: none;
+.logo {
+  display: none;
+
+  @include respond-above(lg) {
+    width: 240px;
+    height: 100%;
+
+    display: block;
+
+    background-color: $greyLight;
+
+    &__name {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__profession {
+      font-size: 10px;
+      line-height: 12px;
+      font-style: italic;
+    }
+  }
 }
 </style>
