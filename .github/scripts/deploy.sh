@@ -13,6 +13,8 @@ cd dist
 # если вы публикуете на пользовательский домен
 
 git init
+git config --global user.email "boss.kachmaz@mail.ru"
+git config --global user.name "KachmaZ"
 git add -A
 git commit -m 'deploy'
 
