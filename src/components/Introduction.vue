@@ -26,7 +26,6 @@ export default {
 
 <style lang="scss">
 .intro {
-  position: relative;
   height: 720px;
 
   display: flex;
