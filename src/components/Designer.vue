@@ -56,7 +56,7 @@ export default {
   &__img {
     width: 400px;
 
-    border-radius: 32px;
+    border-radius: 32px; 
   }
 }
 </style>
