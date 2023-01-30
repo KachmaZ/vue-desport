@@ -13,3 +13,19 @@ src: url(~@/assets/fonts/bodoni.ttf);
 font-family: HamiltoneG;
 src: url(~@/assets/fonts/HamiltoneG.ttf);
 }
+
+.text {
+    &-1 {
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+.h {
+    &-1 {
+        font-family: Bodoni;
+        font-weight: 400;
+        font-size: 96px;
+    }
+}

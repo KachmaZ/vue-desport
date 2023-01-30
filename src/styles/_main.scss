@@ -1,18 +1,23 @@
 @import '_variables';
 @import '_mixins';
 @import '_typography';
+@import '_spacings';
 
-// $spacers: (
-//     0: 0,
-//     1: 4px,
-//     2: 8px,
-//     3: 16px,
-//     4: 24px,
-//     5: 32px,
-//     6: 40px,
-//     7: 64px,
-//     8: 104px,
-//     9: 168px,
-//     10: 264px,
-// );
 
+.container {
+    margin: 0 auto;
+
+    max-width: 576px;
+
+    @include respond-above(md) {
+        max-width: 992px;
+    }
+
+    @include respond-above(lg) {
+        max-width: 1344px;
+    }
+
+    @include respond-above(wxpp) {
+        max-width: 1920px;
+    }
+}

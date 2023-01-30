@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <SocLinks :isRegular="true" />
+    <SocLinks :isSided="true" />
     <router-view />
     <Footer />
   </div>
@@ -10,7 +10,7 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
-import SocLinks from "@/components/SocLinks.vue";
+import SocLinks from "@/components/parts/SocLinks.vue";
 export default {
   components: {
     Header,
@@ -21,7 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 * {
   margin: 0;
   padding: 0;

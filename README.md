@@ -24,3 +24,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Figma layout
+https://www.figma.com/file/d9cdirrQNHtkSLRzZz5f2t/Int-Des?node-id=1%3A2

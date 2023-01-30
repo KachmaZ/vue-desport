@@ -12,7 +12,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import ProjectDemoCard from "./ProjectDemoCard.vue";
+import ProjectDemoCard from "./parts/ProjectDemoCard.vue";
 
 export default {
   components: {

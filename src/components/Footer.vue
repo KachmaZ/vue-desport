@@ -18,8 +18,8 @@
 
 <script>
 import userConfig from "../../user.config";
-import Signature from "@/components/Signature.vue";
-import SocLinks from "@/components/SocLinks.vue";
+import Signature from "@/components/parts/Signature.vue";
+import SocLinks from "@/components/parts/SocLinks.vue";
 
 export default {
   data() {

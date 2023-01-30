@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <section class="screen introduction">
+    <div class="container intro">
       <img
         class="intro-img"
         src="../assets/introductionImg.png"
         alt=""
         srcset=""
       />
-      <div class="intro-desc">
-        <h1 class="intro-head">Interior Design</h1>
-        <p class="intro-text">
+      <div class="intro-desc mb-5">
+        <h1 class="intro-head h-1">Interior Design</h1>
+        <p class="intro-text text-1">
           Предварительные выводы неутешительны: понимание сути
           ресурсосберегающих технологий позволяет выполнить важные задания по
           разработке вывода текущих активов.
@@ -18,8 +18,8 @@
           <router-link to="/about">More</router-link>
         </div>
       </div>
-    </section>
-    <section class="screen designer">
+    </div>
+    <div class="container designer">
       <div class="des-desc">
         <span class="desc-subtitle">Создание дизайна интерьеров</span>
         <h2 class="desc-head">Воплощаем мечты</h2>
@@ -42,8 +42,8 @@
       <div class="signature-wrapper">
         <Signature :name="user.name" />
       </div>
-    </section>
-    <section class="screen portfolio">
+    </div>
+    <div class="container portfolio">
       <div class="title">
         <h1>PORTFOLIO</h1>
         <div class="port-more more-btn">
@@ -51,14 +51,14 @@
         </div>
       </div>
       <DemosGrid />
-    </section>
-    <section class="screen service"></section>
+    </div>
+    <div class="container service"></div>
   </div>
 </template>
 
 <script>
 import userConfig from "../../user.config.js";
-import Signature from "@/components/Signature.vue";
+import Signature from "@/components/parts/Signature.vue";
 import DemosGrid from "@/components/DemosGrid.vue";
 
 export default {
@@ -91,7 +91,7 @@ export default {
   border-bottom: 1px solid #000;
 }
 
-.introduction {
+.intro {
   position: relative;
   height: 720px;
   margin: 50px 140px 125px;
@@ -119,27 +119,18 @@ export default {
     display: flex;
     flex-direction: column;
 
-    text-align: right;
+    align-items: flex-end;
 
     .intro-head {
-      font-family: Bodoni;
-      font-weight: 400;
-      font-size: 96px;
+      text-align: right;
+      // font-family: Bodoni;
+      // font-weight: 400;
+      // font-size: 96px;
     }
 
-    .intro-text {
-      width: 45%;
-      align-self: flex-end;
-
-      font-size: 18px;
-      font-weight: 300;
-    }
-
-    .intro-more {
-      position: absolute;
-      bottom: 0;
-      left: 75%;
-    }
+    // .intro-text {
+    //   width: 45%;
+    // }
   }
 }
 
@@ -206,7 +197,7 @@ export default {
 
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
   }
 }
 

@@ -1,0 +1,67 @@
+@mixin spacing($cssValue, $spacersArray) {
+    @each $spacerKey, $spacer in $spacersArray {
+        &-#{$spacerKey}{
+            #{$cssValue}: $spacer;
+        }
+
+        &-md {
+            &-#{$spacerKey}{
+                #{$cssValue}: $spacer;
+            }
+        }
+
+        &-lg {
+            &-#{$spacerKey}{
+                #{$cssValue}: $spacer;
+            }
+        }
+
+        &-wxpp {            
+            &-#{$spacerKey}{
+                #{$cssValue}: $spacer;
+            }
+        }
+    }
+}
+
+// App global spaces values
+$spacers: (
+    0: 0,
+    1: 4px,
+    2: 8px,
+    3: 16px,
+    4: 24px,
+    5: 32px,
+    6: 40px,
+    7: 64px,
+    8: 104px,
+    9: 168px,
+    10: 264px,
+);
+
+// Set for creating a classes with properties
+// ClassName: PropertyName 
+$properties: (
+    m: margin,
+    mr: margin-right,
+    ml: margin-left,
+    mt: margin-top,
+    mb: margin-bottom,
+    
+    p: padding,
+    pr: padding-right,
+    pl: padding-left,
+    pt: padding-top,
+    pb: padding-bottom,
+);
+
+@each $propClass, $propName in $properties {
+    .#{$propClass}{
+        @include spacing(#{$propName}, $spacers)
+    }
+}
+
+// Usable classes examples:
+// .p-lg-8  => media>992px padding: 104px
+// .m-4     =>             padding: 24px
+// .mt-md-7 => media>768px padding: 64px

@@ -15,7 +15,8 @@
         :key="page.id"
         :data-name="page.name"
         :to="page.link"
-        >{{ page.desc }}</router-link>
+        >{{ page.desc }}</router-link
+      >
     </div>
   </header>
 </template>
