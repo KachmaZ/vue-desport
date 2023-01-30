@@ -1,24 +1,24 @@
 @mixin spacing($cssValue, $spacersArray) {
     @each $spacerKey, $spacer in $spacersArray {
         &-#{$spacerKey}{
-            #{$cssValue}: $spacer;
+            #{$cssValue}: $spacer !important;
         }
 
         &-md {
             &-#{$spacerKey}{
-                #{$cssValue}: $spacer;
+                #{$cssValue}: $spacer !important;
             }
         }
 
         &-lg {
             &-#{$spacerKey}{
-                #{$cssValue}: $spacer;
+                #{$cssValue}: $spacer !important;
             }
         }
 
         &-wxpp {            
             &-#{$spacerKey}{
-                #{$cssValue}: $spacer;
+                #{$cssValue}: $spacer !important;
             }
         }
     }

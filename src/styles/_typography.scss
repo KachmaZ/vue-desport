@@ -15,17 +15,68 @@ src: url(~@/assets/fonts/HamiltoneG.ttf);
 }
 
 .text {
-    &-1 {
-        font-family: Lato;
-        font-size: 18px;
-        font-weight: 300;
+    @mixin text-breakpoints() {
+        &-1 {
+            font-family: Lato;
+            font-size: 18px;
+            font-weight: 300;
+        }
+    
+        &-2 {
+            font-family: Lato;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 29px;
+        }
+    }
+
+    @include text-breakpoints();
+
+    &-sm {
+        @include respond-above(sm) {
+            @include text-breakpoints()
+        }
+    }
+
+    &-md {
+        @include respond-above(md) {
+            @include text-breakpoints()
+        }
+    }
+
+    &-lg {
+        @include respond-above(lg) {
+            @include text-breakpoints()
+        }
     }
 }
 
 .h {
-    &-1 {
-        font-family: Bodoni;
-        font-weight: 400;
-        font-size: 96px;
+    @mixin head-breakpoints() {
+        &-1 {
+            font-family: Bodoni;
+            font-weight: 400;
+            font-size: 96px;
+        }
+    }
+
+    @include head-breakpoints();
+
+    &-sm {
+        @include respond-above(sm) {
+            @include head-breakpoints();
+        }
+    }
+
+    &-md {
+        @include respond-above(md) {
+            @include head-breakpoints();
+        }
+    }
+
+    &-lg {
+        @include respond-above(lg) {
+            @include head-breakpoints();
+        }
     }
 }

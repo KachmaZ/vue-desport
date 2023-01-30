@@ -4,6 +4,12 @@
 @import '_spacings';
 
 
+main {
+    @include respond-above(sm) {
+        padding: 0 40px;
+    }
+}
+
 .container {
     margin: 0 auto;
 
@@ -14,7 +20,7 @@
     }
 
     @include respond-above(lg) {
-        max-width: 1344px;
+        max-width: 1280px;
     }
 
     @include respond-above(wxpp) {
