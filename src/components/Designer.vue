@@ -43,14 +43,6 @@ export default {
 
   &__desc {
     width: 50%;
-
-    .desc {
-      &__subtitle {
-      }
-
-      &__title {
-      }
-    }
   }
 
   &__img {
