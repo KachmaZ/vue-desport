@@ -1,5 +1,6 @@
 <template>
   <div class="demos">
+    DEMOS
     <ProjectDemoCard
       v-for="project in demoProjects"
       :key="project.id"
@@ -12,7 +13,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import ProjectDemoCard from "./parts/ProjectDemoCard.vue";
+import ProjectDemoCard from "@/components/parts/ProjectDemoCard.vue";
 
 export default {
   components: {
