@@ -4,21 +4,35 @@
             #{$cssValue}: $spacer !important;
         }
 
+        &-sm {
+            @include respond-above(sm){
+                &-#{$spacerKey}{
+                    #{$cssValue}: $spacer !important;
+                }
+            }
+        }
+
         &-md {
-            &-#{$spacerKey}{
-                #{$cssValue}: $spacer !important;
+            @include respond-above(md){
+                &-#{$spacerKey}{
+                    #{$cssValue}: $spacer !important;
+                }
             }
         }
 
         &-lg {
-            &-#{$spacerKey}{
-                #{$cssValue}: $spacer !important;
+            @include respond-above(lg){
+                &-#{$spacerKey}{
+                    #{$cssValue}: $spacer !important;
+                }
             }
         }
 
-        &-wxpp {            
-            &-#{$spacerKey}{
-                #{$cssValue}: $spacer !important;
+        &-wxpp {        
+            @include respond-above(wxpp){    
+                &-#{$spacerKey}{
+                    #{$cssValue}: $spacer !important;
+                }
             }
         }
     }
@@ -63,5 +77,5 @@ $properties: (
 
 // Usable classes examples:
 // .p-lg-8  => media>992px padding: 104px
-// .m-4     =>             padding: 24px
-// .mt-md-7 => media>768px padding: 64px
+// .m-4     =>             margin: 24px
+// .mt-md-7 => media>768px margin-top: 64px
