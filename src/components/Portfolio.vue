@@ -20,8 +20,8 @@ export default {
 
 <style lang="scss" scoped>
 .portfolio {
-    &__title {
-        text-align: center;
-    }
+  &__title {
+    text-align: center;
+  }
 }
 </style>

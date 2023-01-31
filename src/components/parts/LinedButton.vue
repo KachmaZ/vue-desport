@@ -17,7 +17,7 @@ export default {
 <style lang="scss">
 .lined-btn {
   width: 170px;
-  
+
   text-align: left;
 
   border-bottom: 1px solid #000;
