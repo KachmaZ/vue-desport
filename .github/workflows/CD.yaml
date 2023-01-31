@@ -14,6 +14,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Github auth
+          run: |
+            git config --global user.name user.name 'KachmaZ'
+            git config --global user.email 'boss.kachmaz@mail.ru'
+
       - uses: actions/checkout@v1
       - name: Script
         run: ./.github/scripts/deploy.sh
