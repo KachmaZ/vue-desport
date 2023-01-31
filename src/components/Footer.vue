@@ -1,15 +1,14 @@
 <template>
-  <footer>
-    <div class="contacts">
-      <div class="phone">+7(999)999-99-99</div>
-      <div class="email">designer_int@yandex.com</div>
-      <br />
-      <div class="address">
+  <footer class="footer p-lg-6 text-lg-1">
+    <div class="footer__contacts">
+      <div>+7(999)999-99-99</div>
+      <div class="mb-lg-3">designer_int@yandex.com</div>
+      <div>
         г.Санкт-Петербург, Кронверский проспект 41, офис 3
       </div>
     </div>
     <SocLinks :isInline="true" />
-    <div class="copyright">
+    <div class="footer__copyright">
       © 2013 — 2022 Молчанова Вероника Дизайн и проектирование интерьеров
     </div>
     <Signature :name="user.name" />
@@ -36,35 +35,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-footer {
+.footer {
   position: relative;
   height: 290px;
-  padding: 40px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  font-family: Lato;
-
   background-color: $grey;
-}
 
-.contacts {
-  text-align: center;
-}
+  &__contacts {
+    text-align: center;
+  }
 
-.copyright {
-  width: 320px;
-  text-align: center;
-
-  color: $black;
-}
-
-.signature {
-  position: absolute;
-  top: 140px;
-  left: 90px;
+  &__copyright {
+    width: 320px;
+    text-align: center;
+  }
+  .signature {
+    position: absolute;
+    top: 140px;
+    left: 90px;
+  }
 }
 </style>
