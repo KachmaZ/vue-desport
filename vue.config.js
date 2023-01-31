@@ -7,5 +7,5 @@ module.exports = {
     },
   },
 
-  publicPath: "/desport-vue/",
+  publicPath: "/vue-desport/",
 };
