@@ -12,8 +12,8 @@ npm run build
 
 # если вы публикуете на пользовательский домен
 
-# git config --global user.email "boss.kachmaz@mail.ru"
-# git config --global user.name "KachmaZ"
+git config --global user.email "boss.kachmaz@mail.ru"
+git config --global user.name "KachmaZ"
 git add dist
 git commit -m 'Deploy'
 
