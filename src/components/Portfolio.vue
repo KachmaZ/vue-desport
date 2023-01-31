@@ -18,10 +18,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.portfolio {
-  &__title {
-    text-align: center;
-  }
-}
+<style lang="scss">
 </style>
