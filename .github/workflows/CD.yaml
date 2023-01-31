@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Github auth
-          run: |
+          run:|
             git config --global user.name user.name 'KachmaZ'
             git config --global user.email 'boss.kachmaz@mail.ru'
 
