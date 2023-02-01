@@ -7,10 +7,30 @@
         <span class="logo__profession">{{ profession }}</span>
       </div>
     </div>
-    <div class="header__nav">
+    <div class="header__nav mr-lg-8">
       <div class="nav">
         <router-link
           class="nav__link"
+          active-class="active"
+          v-for="page in getSitePages"
+          :key="page.id"
+          :data-name="page.name"
+          :to="page.link"
+          >{{ page.desc }}</router-link
+        >
+      </div>
+    </div>
+    <img
+      class="header__menu-btn ml-4"
+      :class="{ opened: isOpened }"
+      @click="setMenu"
+      src="~@/assets/icons/menu-burger-icon.svg"
+      alt=""
+    />
+    <div class="header__mobile-menu" :class="{ opened: isOpened }">
+      <div class="mobile-nav">
+        <router-link
+          class="mobile-nav__link"
           active-class="active"
           v-for="page in getSitePages"
           :key="page.id"
@@ -32,6 +52,7 @@ export default {
     return {
       name: userConfig.name,
       profession: userConfig.profession,
+      isOpened: false,
     };
   },
 
@@ -39,7 +60,11 @@ export default {
     ...mapGetters(["getSitePages"]),
   },
 
-  methods: {},
+  methods: {
+    setMenu() {
+      this.isOpened = !this.isOpened;
+    },
+  },
 };
 </script>
 
@@ -48,60 +73,130 @@ export default {
   height: 64px;
   width: 100%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   position: fixed;
+
+  display: flex;
+  align-items: center;
 
   font-family: Lato;
 
   background-color: $greyTransparent;
-}
 
-.nav {
-  display: flex;
-  &__link {
-    width: 130px;
-    padding: 6px;
+  &__nav {
+    display: none;
+  }
 
-    display: flex;
-    justify-content: center;
+  &__logo {
+    display: none;
+  }
 
-    font-size: 14px;
+  &__menu-btn {
+    width: 32px;
+    height: 32px;
 
-    transition: 0.5s linear;
+    transition: ease-in 100ms;
+    cursor: pointer;
 
-    &:hover {
-      background-color: $colorHover;
+    &.opened {
+      transform: rotate(90deg);
     }
+  }
 
-    &.active {
-      background-color: $colorActive;
+  &__mobile-menu {
+    display: none;
+
+    height: 100vh;
+    width: 200px;
+
+    position: fixed;
+    top: 64px;
+    left: -200px;
+
+    background-color: $greyTransparent;
+
+    transition: ease-out 500ms;
+    &.opened {
+      display: block;
+      transform: translateX(200px);
+    }
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+
+      &__link {
+        height: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
 
-.logo {
-  display: none;
+@include respond-above(sm) {
+  .header {
+    justify-content: center;
+    &__nav {
+      display: flex;
+      justify-content: center;
 
-  @include respond-above(lg) {
-    width: 240px;
-    height: 100%;
+      .nav {
+        display: flex;
+        &__link {
+          width: 110px;
+          padding: 6px;
 
-    display: block;
+          display: flex;
+          justify-content: center;
 
-    background-color: $greyLight;
+          font-size: 14px;
 
-    &__name {
-      font-size: 14px;
-      line-height: 16px;
+          transition: 0.5s linear;
+
+          &:hover {
+            background-color: $colorHover;
+          }
+
+          &.active {
+            background-color: $colorActive;
+          }
+        }
+      }
     }
 
-    &__profession {
-      font-size: 10px;
-      line-height: 12px;
-      font-style: italic;
+    &__menu-btn {
+      display: none;
+    }
+  }
+}
+
+@include respond-above(lg) {
+  .header {
+    justify-content: space-between;
+
+    &__logo {
+      display: block;
+
+      .logo {
+        width: 240px;
+        height: 100%;
+
+        display: block;
+
+        background-color: $greyLight;
+
+        &__name {
+          font-size: 14px;
+          line-height: 16px;
+        }
+
+        &__profession {
+          font-size: 10px;
+          line-height: 12px;
+          font-style: italic;
+        }
+      }
     }
   }
 }
