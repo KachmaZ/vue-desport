@@ -48,10 +48,15 @@ export default {
   position: fixed;
   top: 100px;
   left: 97%;
+  display: none;
   margin-right: 20px;
   z-index: 10;
 
   flex-direction: column;
+
+  @include respond-above(md) {
+    display: flex;
+  }
 }
 
 .inline {

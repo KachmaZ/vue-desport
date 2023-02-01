@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer p-lg-6 text-lg-1">
+  <footer class="footer p-5 p-sm-6 text-1">
     <div class="footer__contacts">
       <div>+7(999)999-99-99</div>
       <div class="mb-lg-3">designer_int@yandex.com</div>
@@ -11,13 +11,11 @@
     <div class="footer__copyright">
       © 2013 — 2022 Молчанова Вероника Дизайн и проектирование интерьеров
     </div>
-    <Signature :name="user.name" />
   </footer>
 </template>
 
 <script>
 import userConfig from "../../user.config";
-import Signature from "@/components/parts/Signature.vue";
 import SocLinks from "@/components/parts/SocLinks.vue";
 
 export default {
@@ -28,7 +26,6 @@ export default {
   },
 
   components: {
-    Signature,
     SocLinks,
   },
 };

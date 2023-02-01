@@ -1,7 +1,7 @@
 <template>
-  <div class="portfolio container">
-    <h1 class="portfolio__title h-lg-1">PORTFOLIO</h1>
-    <DemosGrid />
+  <div class="portfolio mb-4 mb-sm-5 mb-lg-6">
+    <h1 class="portfolio__title h-2 h-md-1 mb-4">PORTFOLIO</h1>
+    <DemosGrid class="mb-4"/>
     <LinedButton to="/portfolio"> More </LinedButton>
   </div>
 </template>
@@ -19,4 +19,16 @@ export default {
 </script>
 
 <style lang="scss">
+.portfolio {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-align: center;
+  }
+
+  .lined-btn {
+    align-self: flex-end;
+  }
+}
 </style>

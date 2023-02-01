@@ -36,6 +36,7 @@
           :key="page.id"
           :data-name="page.name"
           :to="page.link"
+          @click="setMenu"
           >{{ page.desc }}</router-link
         >
       </div>
@@ -106,7 +107,7 @@ export default {
     display: none;
 
     height: 100vh;
-    width: 200px;
+    width: 280px;
 
     position: fixed;
     top: 64px;

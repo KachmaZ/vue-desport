@@ -1,7 +1,7 @@
 @mixin spacing($cssValue, $spacersArray) {
     @each $spacerKey, $spacer in $spacersArray {
         &-#{$spacerKey}{
-            #{$cssValue}: $spacer !important;
+            #{$cssValue}: $spacer;
         }
 
         &-sm {
